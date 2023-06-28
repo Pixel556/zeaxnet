@@ -7,6 +7,12 @@
   <link href="/style.css" rel="stylesheet" type="text/css" media="all">
   <style>
     /* Your regular styles go here */
+
+    /* Add custom cursor style */
+    .custom-cursor {
+      cursor: url('normal-select.cur'), auto;
+    }
+
     body {
       background-color: #f2f2f2; /* Set the background color to light gray */
       color: black; /* Set text color to black */
@@ -106,7 +112,7 @@
     }
   </script>
 </head>
-<body>
+<body class="custom-cursor">
   <div class="section">
     <h1>H3LL0 TH3R3!</h1>
     <p>Welcome to my site</p>
@@ -124,7 +130,7 @@
     <button class="button" onclick="window.location.href='https://github.com/Pixel556'">GitHub</button>
   </div>
 
-  
+
   <script>
     // Add active class to the current button (highlight it)
     var header = document.getElementById("myDIV");
