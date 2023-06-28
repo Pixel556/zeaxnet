@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>W3LC0M3</title>
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  <style>
+    /* Your regular styles go here */
+    body {
+      background-color: #f2f2f2; /* Set the background color to light gray */
+      color: black; /* Set text color to black */
+      display: flex;
+      flex-direction: column; /* Arrange content vertically */
+      justify-content: center; /* Center align content vertically */
+      align-items: center; /* Center align content horizontally */
+      min-height: 100vh; /* Set a minimum height to ensure full viewport coverage */
+      text-align: center;
+    }
+    
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #333; /* Set background color to dark gray in dark mode */
+      color: white; /* Set text color to white in dark mode */
+    }
+
+    /* Section styles */
+    .section {
+      width: 100%; /* Set the section width to full width */
+      padding: 20px; /* Add padding to the section */
+      background-color: #f2f2f2; /* Set the section background color to light gray */
+      border-top: 1px solid #ccc; /* Add top border */
+      border-bottom: 1px solid #ccc; /* Add bottom border */
+      transition: background-color 0.3s ease-in-out; /* Add smooth transition for background color */
+    }
+
+    /* Dark mode styles for sections */
+    body.dark-mode .section {
+      background-color: #333; /* Set the section background color to dark gray in dark mode */
+    }
+
+    /* Style the button */
+    .button {
+      margin-top: 20px; /* Add top margin for spacing */
+      padding: 12px 24px; /* Add padding to the button */
+      background-color: #007bff; /* Set the button background color to blue */
+      color: white; /* Set the button text color to white */
+      font-size: 1.2em; /* Set the button font size */
+      border-radius: 4px; /* Add border radius to the button */
+      cursor: pointer;
+    }
+
+    /* Dark mode style for the button */
+    body.dark-mode .button {
+      background-color: #4CAF50; /* Set the button background color to green in dark mode */
+    }
+
+    /* Style the dark mode switch */
+    .dark-mode-switch {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      color: #fff; /* Set text color to white */
+    }
+
+    .dark-mode-switch input[type="checkbox"] {
+      display: none;
+    }
+
+    .dark-mode-switch label {
+      display: block;
+      width: 60px;
+      height: 34px;
+      background-color: gray;
+      border-radius: 17px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .dark-mode-switch label::after {
+      content: 'Dark';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      color: white; /* Set text color to white */
+    }
+
+    .dark-mode-switch input[type="checkbox"]:checked + label {
+      background-color: #4CAF50;
+    }
+
+    .dark-mode-switch input[type="checkbox"]:checked + label::after {
+      content: 'Light';
+      right: auto;
+      left: 10px;
+    }
+  </style>
+  <script>
+    function toggleDarkMode() {
+      const body = document.querySelector('body');
+      body.classList.toggle('dark-mode');
+    }
+  </script>
+</head>
+<body>
+  <div class="section">
+    <h1>H3LL0 TH3R3!</h1>
+    <p>Welcome to my site</p>
+    <p>I am a <strong>YouTuber</strong> and a <em>random person</em>.</p>
+    <p>I'm just that one normal guy out there, my Minecraft is zeax1995.</p>
+  </div>
+
+  <div class="dark-mode-switch">
+    <input type="checkbox" id="dark-mode-toggle" onclick="toggleDarkMode()">
+    <label for="dark-mode-toggle"></label>
+  </div>
+
+  <div class="section">
+    <button class="button" onclick="window.location.href='https://zeaxnet.neocities.org/projects.html'">Projects</button>
+    <button class="button" onclick="window.location.href='https://github.com/Pixel556'">GitHub</button>
+  </div>
+
+  <script>
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("myDIV");
+    var btns = header.getElementsByClassName("button");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        if (current.length > 0) {
+          current[0].className = current[0].className.replace(" active", "");
+        }
+        this.className += " active";
+      });
+    }
+  </script>
+</body>
+</html>
