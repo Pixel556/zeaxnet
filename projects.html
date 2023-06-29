@@ -4,10 +4,42 @@
     <style>
         body {
             background-color: lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .section {
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 24px;
+        }
+
+        .section-1 p {
+            font-family: "Comic Sans MS", cursive;
+        }
+
+        .section-2 button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <p>My Projects!</p>
+    <div class="section section-1">
+        <p>My Projects!</p>
+    </div>
+    <div class="section section-2">
+        <a href="https://www.youtube.com/watch?v=kbZqlHTyxPo&ab_channel=Zeaxey" target="_blank">
+            <button>Prompt Of Epicness (POE)</button>
+        </a>
+    </div>
 </body>
 </html>
